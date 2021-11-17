@@ -1,0 +1,51 @@
+<?php
+
+/**
+ *  INICIANDO SESSÃO
+ */
+session_start();
+
+/**
+* CARREGANDO O AUTOLOAD DAS CLASSES
+*/
+require_once __DIR__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
+
+/**
+ * CARRENDANDO CLASSES UTILIZANDO OS NAMESPACE
+ */
+use \Slim\Slim;
+
+
+// INSTANCIANDO UMA OBJETO DA CLASSE SLIM
+$app = new Slim;
+
+// CHAMANDO FUNÇÃO CONFIG DA CLASSE SLIM
+$app->config('debug', true);
+
+// CARREGANDO FUNÇÕES
+require_once __DIR__.DIRECTORY_SEPARATOR."functions.php";
+
+// CARREGANDO ROTAS PADRÃO
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."pages.php";
+
+// CARREGANDO ROTAS DE CLIENTE
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."client.php";
+
+// CARREGANDO ROTAS DO ADMIN
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."admin.php";
+
+// CARREGANDO ROTAS DOS USUARIOS - ADMIN
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."admin-users.php";
+
+// CARREGANDO ROTAS DAS CATEGORIAS - ADMIN
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."admin-rooms.php";
+
+// CARREGANDO ROTAS DOS PRODUTOS - ADMIN
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."admin-devices.php";
+
+// CARREGANDO ROTAS DAS MENSAGENS - ADMIN
+require_once __DIR__.DIRECTORY_SEPARATOR."routes".DIRECTORY_SEPARATOR."admin-message.php";
+
+// CHAMANDO FUNÇÃO RUN DA CLASSE SLIM
+$app->run();
+

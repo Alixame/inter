@@ -1,0 +1,8 @@
+vendor/composer
+vendor/phpmailer
+vendor/rain
+vendor/slim
+vendor/autoload.php
+httpd-vhosts.conf
+hosts
+.vscode/

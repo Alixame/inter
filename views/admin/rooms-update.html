@@ -1,0 +1,45 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+  <a href="/admin/rooms"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a> Voltar
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/admin/rooms">Comodos</a></li>
+    <li class="active">Editando</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Editar Comodo</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" action="/admin/rooms/{$rooms.idroom}" method="post">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="desroom">Nome do Comodo</label>
+              <input type="text" class="form-control" id="desroom" name="desroom" placeholder="Digite o nome do comodo" value="{$rooms.desroom}">
+            </div>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

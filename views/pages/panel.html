@@ -1,0 +1,56 @@
+
+<!-- BANNER -->
+<section class="bunner" id="home">
+  <h2><span>Seja Bem-Vindo(a)<br></span> {function="getUserName()"}</h2>
+</section>
+
+<section class="sec" id="devices">
+  <div class="content">
+      <div class="mxw500p">
+          <h3>Dispositivos</h3>
+          <p>Controle seus dispositivos abaixo</p>
+      </div>
+      <div class="devices">
+        {loop="$devices"}
+        <!-- BOX -->
+            <div class="box">
+              <div class="content">
+                <h2>{$value.desdevice}</h2>
+                <p>{$value.desroom}</p>
+              </div>
+
+              {if="$value.deson == 0"}
+              <div class="imgBx">
+                  <img src="{$value.desphotooff}">
+              </div>
+              {else}
+              <div class="imgBx">
+                <img src="{$value.desphotoon}">
+              </div>
+              {/if}
+
+              <div class="row100">
+                <form action="/panel/on/device/{$value.iddevice}" method="post">
+                  <div class="inputBx50">
+                      <input class="input-on" type="submit" value="LIGAR">
+                  </div>
+                </form>
+
+                <form action="/panel/off/device/{$value.iddevice}" method="post">
+                  <div class="inputBx50">
+                    <input class="input-off" type="submit" value="DESLIGAR">
+                  </div>
+                </form>
+              </div>
+            </div>
+        {else}
+        <div class="box">
+            <div class="content">
+              <h2>Você não possui dispositivos cadastrados</h2>
+            </div>
+        </div>
+        {/loop}
+          
+      </div>
+  </div>
+</section>

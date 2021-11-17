@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RECUPERAR | SENHA</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="/resources/admin/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/resources/admin/dist/css/AdminLTE.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="/resources/admin/plugins/iCheck/square/blue.css">
+    
+  <link rel="stylesheet" href="/resources/site/css/style.css">
+
+</head>
+<body class="hold-transition lockscreen backgound-page">
+<!-- Automatic element centering -->
+
+<div class="login-box">
+
+  <div  class="text-center">
+    <img src="/resources/img/logo.png" width="120">
+  </div>
+  <div class="lockscreen-logo">
+    <a href=""><strong>RECUPERAR</strong> SENHA</a>
+  </div>
+
+  <div class="help-block login-box-body">
+
+    <a href="/login"><img src="/resources/img/back.svg" width="30"></a>
+
+    <div class="help-block text-center login-box-msg">
+      Digite seu e-mail e receba as instruções para redefinir a sua senha.
+    </div>
+    
+    <!-- START LOCK SCREEN ITEM -->
+  <div class="lockscreen-item">
+
+      <!-- lockscreen credentials (contains the form) -->
+        <form id="login-form-wrap" class="login" method="post" action="/forgot">
+            <p class="form-row form-row-first">
+                <label for="email">E-mail <span class="required">*</span>
+                </label>
+                <input type="email" id="email" name="email" class="input-text" style="width:245px">
+            </p>
+            <div class="clear"></div>
+            <p class="form-row text-center">
+                <input type="submit" value="Enviar" name="login" class="button">     
+            </p>
+
+            <div class="clear"></div>
+        </form>                    
+      <!-- /.lockscreen credentials -->
+    </div>
+
+     <!-- /.lockscreen-item -->
+  <div class="text-center">
+    <a href="/login">Já possuo conta!</a>
+  </div>
+
+  </div>
+
+ 
+  <div class="lockscreen-footer text-center">
+    Copyright &copy; 2014-2016 <b><a href="http://almsaeedstudio.com" class="text-black">Almsaeed Studio</a></b><br>
+    All rights reserved
+  </div>
+</div>
+<!-- /.center -->
+
+<!-- jQuery 2.2.3 -->
+<script src="/resources/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="/resources/admin/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

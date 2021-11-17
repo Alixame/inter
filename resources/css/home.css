@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("/img/Kerox-NonCommercial.otf");
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 1000px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.6s;
+}
+
+.header-panel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.6s;
+}
+
+header.sticky{
+    padding: 5px 100px;
+    background: #FFF;
+    border-bottom: 1px solid rgba(80, 22, 22, 0.1);
+}
+
+.font-logo{
+    font-family: 'Kerox-NonCommercial', sans-serif;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFF;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: 0.6s;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+    color: #000;
+}
+
+.bunner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/background1.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bunner h2{
+    color: #FFF;
+    font-size: 5em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+}
+
+.bunner h2 span{
+    color: #4978FF;
+}
+
+.sec{
+    background: #FFF;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3{
+    font-family: 'Kerox-NonCommercial', sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+
+p{
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.services{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.services .box .iconBx{
+    margin-top: 25px;
+}
+
+.services .box .iconBx img{
+    max-width: 75px;
+    margin-bottom: 15px;
+}
+
+.services .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.stats{
+    background: #000;
+    padding-top: 250px;
+    margin-top: -250px;
+}
+
+.stats h3,
+.stats p{
+    color: #FFF;
+}
+
+.statsBox{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.statsBox h2{
+    color: #FFF;
+    font-size: 36px;
+}
+
+.statsBox h4{
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.devices{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.devices .box{
+    width: 500px;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.devices .box .imgBx{
+    margin-top: 25px;
+}
+
+.devices .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.devices .box .imgBx img{
+    max-width: 60%;
+    margin-bottom: 15px;
+}
+
+.devices .row100 input{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #FFF;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+
+.devices .row100 input[type="submit"]{
+    background: #FFF;
+    color: #000;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.devices .row100 .input-on:hover{
+    border-bottom: 2px solid rgb(40, 163, 60);
+}
+
+.devices .row100 .input-off:hover{
+    border-bottom: 2px solid rgb(161, 45, 41);
+}
+
+
+
+.workBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.workBx .brand{
+    position: relative;
+    background: #4978ff;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workBx .brand:hover{
+    background: #000;
+}
+
+.workBx .brand a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.workBx .brand:hover a{
+    color: rgba(255, 255, 255, 1);
+}
+
+.teamBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.teamBx .member{
+    position: relative;
+    background: #000;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamBx .member .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.teamBx .member .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teamBx .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.teamBx .member:hover .details{
+    opacity: 1;
+}
+
+.teamBx .member .details h2{
+   color: #FFF;
+   text-transform: uppercase;
+   font-size: 20px;
+   letter-spacing: 1px;
+}
+
+.teamBx .member .details h2 span{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.contact{
+    background: #000;
+}
+
+.contact h3,
+.contact p{
+    color: #FFF;
+}
+
+.contactForm{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contactForm form{
+    width: 100%;
+}
+
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+}
+
+.contactForm .row100 .inputBx50{
+    width: 50%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 .inputBx100{
+    width: 100%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 input,
+.contactForm .row100 textarea,
+.contactForm .row100 select{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+
+.contactForm .row100 select{
+    background: #000;
+}
+
+.contactForm .row100 textarea{
+    height: 100px;
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder,
+.contactForm .row100 select::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contactForm .row100 input[type="submit"]{
+    background: #FFF;
+    color: #000;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.sci ul{
+    display: flex;
+}
+
+.sci ul li{
+    list-style: none;
+}
+
+.sci ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.sci ul li a img{
+    filter: invert(1);
+    max-width: 40px;
+}
+
+.sci ul li a:hover img{
+    opacity: 0.5;
+}
+
+.copyright{
+    color: #FFF;
+}
+
+.toggle{
+    display: none;
+}
+
+@media (max-width: 1360px){
+
+    .toggle{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .toggle:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        box-shadow: 0 10px 0 #000;
+        transition: 0.5s;
+    }
+
+    .toggle:after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    header,
+    header.sticky{
+        padding: 5px 50px;
+        background: #FFF;
+    }
+
+    header ul{
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #FFF;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header.active ul{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+    }
+
+    header.active ul li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 40px;
+    }
+
+    header .logo,
+    header ul li a{
+        color: #000;
+    }
+
+    .banner{
+        background-position: center;
+    }
+
+    .banner h2{
+        font-size: 60px;
+        padding: 0 50px ;
+    }
+
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+
+    .services .box{
+        width: 100%;
+    }
+    
+    .stats{
+        padding-top: 250px;
+    }
+
+    .row100{
+        flex-direction: column;
+    }
+
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin: 0;
+    }
+
+    .sic{
+        margin: 20px;
+    }
+
+    .sic ul li a img{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 36px;
+    }
+
+}
+
+@media (max-width: 510px){
+
+    .bunner h2{
+        font-size: 3em;
+    }
+
+
+
+}

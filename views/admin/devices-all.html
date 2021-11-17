@@ -1,0 +1,73 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    <a href="/admin"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a> Voltar
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active"><a href="/admin/products">Dispositivos</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="text-center">
+    <h1>Todos os Dispositivos</h1>
+  </div>
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-primary">
+
+        <div class="box-tools " style="position: relative; margin: 5px; margin-left: 90%;">
+          
+        </div>
+
+            <div class="box-body no-padding">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Dispositivo</th>
+                    <th>Cliente</th>
+                    <th style="width: 250px">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {loop="$devices"}
+                  <tr>
+                    <td>{$value.iddevice}</td>
+                    <td>{$value.desdevice}</td>
+                    <td>{$value.desperson}</td>
+                    <td>
+                      <a href="/admin/users/{$value.idperson}/devices" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Detalhes do Cliente</a>
+                      <a href="/admin/devices/{$value.iddevice}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                    </td>
+                  </tr>
+                  {else}
+                  <tr>
+                      <td colspan="6">Não foi encontrado nenhum dispositivos.</td>
+                  </tr>
+                  {/loop}
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                {loop="$pages"}
+                <li><a href="{$value.href}">{$value.text}</a></li>
+                {/loop}
+              </ul>
+            </div>
+          </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

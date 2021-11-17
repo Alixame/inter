@@ -1,0 +1,73 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    <a href="/admin/devices"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a> Voltar
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/admin/devices">Dispositivos</a></li>
+    <li class="active"><a href="/admin/users/{$iduser}/devices/create">Cadastrar</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-success">
+        <div class="box-header with-border">
+          <h3 class="box-title">Novo Dispositivo</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" action="/admin/users/{$iduser}/devices/create" method="post">
+          <div class="box-body">
+
+            <div class="form-group">
+              <label for="desdevice">Nome do Dispositivo</label>
+              <input type="text" class="form-control" id="desdevice" name="desdevice" placeholder="Digite o nome do produto">
+            </div>
+
+            <div class="form-group">
+              <label for="pinarduino">Pino do Arduino</label>
+              <select class="form-control" name ="pinarduino">
+                <option value="">Selecione o Pino</option>
+                <option value="1">Pino 1</option>
+                <option value="2">Pino 2</option>
+                <option value="4">Pino 4</option>
+                <option value="5">Pino 5</option>
+                <option value="6">Pino 6</option>
+                <option value="7">Pino 7</option>
+                <option value="8">Pino 8</option>
+                <option value="9">Pino 9</option>
+                <option value="10">Pino 10</option>
+                <option value="11">Pino 11</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="idroom">Comodo</label>
+              <select class="form-control" name ="idroom">
+                <option value="">Selecione o Comodo</option>
+                {loop="$rooms"}
+                <option value="{$value.idroom}">{$value.desroom}</option>
+                {/loop}
+              </select>
+            </div>
+
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

@@ -1,0 +1,113 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    <a href="/admin/users/{$devices.iduser}/devices"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a> Voltar
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="/admin/devices">Dispositivos</a></li>
+    <li class="active">Editando</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+  	<div class="col-md-12">
+  		<div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Editar Dispositivo</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" action="/admin/devices/{$devices.iddevice}" method="post" enctype="multipart/form-data">
+          <div class="box-body">
+
+            <div class="form-group">
+              <label for="desdevice">Nome do Dispositivo</label>
+              <input type="text" class="form-control" id="desdevice" name="desdevice" placeholder="Digite o nome do dispositivo" value="{$devices.desdevice}">
+            </div>
+
+            <div class="form-group">
+              <label for="pinarduino">Pino do Arduino</label>
+              <select class="form-control" name ="pinarduino">
+                <option value="" {if="$devices.pin_A == NULL"} selected {/if}>Selecione o Pino</option>
+                <option value="1" {if="$devices.pin_A == 1"} selected {/if}>Pino 1</option>
+                <option value="2" {if="$devices.pin_A == 2"} selected {/if}>Pino 2</option>
+                <option value="4" {if="$devices.pin_A == 4"} selected {/if}>Pino 4</option>
+                <option value="5" {if="$devices.pin_A == 5"} selected {/if}>Pino 5</option>
+                <option value="6" {if="$devices.pin_A == 6"} selected {/if}>Pino 6</option>
+                <option value="7" {if="$devices.pin_A == 7"} selected {/if}>Pino 7</option>
+                <option value="8" {if="$devices.pin_A == 8"} selected {/if}>Pino 8</option>
+                <option value="9" {if="$devices.pin_A == 9"} selected {/if}>Pino 9</option>
+                <option value="10" {if="$devices.pin_A == 10"} selected {/if}>Pino 10</option>
+                <option value="11" {if="$devices.pin_A == 11"} selected {/if}>Pino 11</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="idroom">Comodo</label>
+              <select class="form-control" name ="idroom">
+                <option value="">Selecione o Comodo</option>
+                <option value="{$devices.idroom}" selected>{$desroom}</option>
+                {loop="$rooms"}
+                  {if="$value.idroom != $devices.idroom"}
+                <option value="{$value.idroom}">{$value.desroom}</option>
+                  {/if}
+                {/loop}
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="file">Imagem Dispositivo (Ligado)</label>
+              <input type="file" class="form-control" id="fileon" name="fileon" value="">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" src="{$devices.desphotoon}">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="file">Imagem Dispositivo (Desligado)</label>
+              <input type="file" class="form-control" id="fileoff" name="fileoff" value="">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" src="{$devices.desphotooff}">
+                </div>
+              </div>
+            </div>
+
+          </div>
+  
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+  	</div>
+  </div>
+
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+document.querySelector('#file').addEventListener('change', function(){
+  
+  var file = new FileReader();
+
+  file.onload = function() {
+    
+    document.querySelector('#image-preview').src = file.result;
+
+  }
+
+  file.readAsDataURL(this.files[0]);
+
+});
+</script>
